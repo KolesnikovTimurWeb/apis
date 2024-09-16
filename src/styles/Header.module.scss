@@ -1,0 +1,254 @@
+.header {
+  margin: 12px 0;
+  height: 100%;
+
+  &_main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &_submain {
+    background-color: #1f2736;
+    padding: 12px;
+
+    &_actions {
+      display: flex;
+      align-items: center;
+      &_bag {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      button {
+        background: transparent;
+        transition: 0.2s ease-in-out;
+        &:hover {
+          opacity: 0.8;
+          transition: 0.2s ease-in-out;
+        }
+      }
+
+      &_div {
+        margin-right: 16px;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        h2 {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 18px;
+        }
+        span {
+          color: #fff;
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 18px;
+        }
+      }
+    }
+    &_input {
+      max-width: 800px;
+      margin: 0 10px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background-color: #fff;
+      label {
+        padding: 12px 16px;
+        cursor: pointer;
+      }
+      input {
+        width: 100%;
+        padding: 12px 16px;
+
+        color: #1f2736;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+
+    &_button {
+      display: flex;
+      align-items: center;
+      background: transparent;
+      color: var(--White, #fff);
+      text-align: center;
+      font-size: 18px;
+      font-weight: 400;
+      transition: 0.2s ease-in-out;
+
+      &:hover {
+        opacity: 0.8;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+  &_ul {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    @media screen and (max-width: 1500px) {
+      gap: 12px;
+    }
+    justify-content: space-between;
+    a {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+      color: #1f2736;
+      font-weight: 400;
+      transition: 0.2s ease-in-out;
+      text-transform: uppercase;
+
+      &:hover {
+        color: #ee5b5b;
+        transition: 0.2s ease-in-out;
+      }
+    }
+  }
+
+  &_select {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    &_social {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+  }
+}
+.navigation {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  &_up {
+    margin: 12px auto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    a {
+      color: #000;
+
+      font-family: "League Spartan";
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 14px;
+    }
+  }
+
+  &_down {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 36px;
+    li {
+      list-style: none;
+    }
+    a {
+      color: #1f2736;
+      font-family: "League Spartan";
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px; /* 125% */
+
+      position: relative;
+    }
+    &_active {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100%;
+        height: 2px;
+        background: #000;
+        top: 0;
+        left: 0;
+        display: flex;
+      }
+    }
+  }
+}
+
+.headerMobile {
+  padding: 12px 0;
+  background: #1f2736;
+
+  &_menu {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    span {
+      width: 100%;
+      height: 2px;
+      background: #fff;
+    }
+  }
+
+  &_input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    label {
+      width: 40px;
+      height: 44px;
+      display: flex;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 20px;
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    input {
+      width: 100%;
+      margin-left: 20px;
+      height: 20px;
+      padding: 12px;
+      background: #fff;
+      color: #1f2736;
+      font-size: 12px;
+      font-weight: 400;
+    }
+  }
+}
+
+.navigationMobile {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  scrollbar-color: rgb(124, 124, 124) rgba(56, 56, 56, 0);
+  scrollbar-width: none;
+  a {
+    color: var(--800, #1f2736);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px; /* 125% */
+  }
+}
+
+.header_navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  left: -10px;
+  background: #fff;
+  z-index: 100;
+
+  button {
+    background: transparent;
+  }
+}

@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Header from "./features/Header";
+import Footer from "./features/Footer";
+import Navigation from "./features/Navigation";
+import HomeMobile from "./pages/HomeMobile";
+import HeaderMobile from "./features/HeaderMobile";
+import NavigationMobile from "./features/NavigationMobile";
+import HeaderNavigation from "./features/HeaderNavigation";
 
 function App() {
+  const isMobile = window.innerWidth;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {isMobile < 1200 ? <HeaderMobile /> : <Header />}
+      {isMobile < 1200 ? <NavigationMobile /> : <Navigation />}
+      {isMobile < 1200 && <HeaderNavigation />}
+      <Routes>
+        <Route path="/" element={isMobile < 1200 ? <HomeMobile /> : <Home />} />
+        <Route path="/hallo" element={<Home />} />
+      </Routes>
+      <Footer />
     </div>
   );
 }
