@@ -458,7 +458,7 @@ const Home = () => {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(4,1fr)",
-            gap: "20px",
+            gap: "40px",
           }}
         >
           <ProductCard />

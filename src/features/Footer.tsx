@@ -13,14 +13,31 @@ const Footer = () => {
         }}
       >
         <div className={styles.footer_left}>
-          <div>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "20px",
+            }}
+          >
             <img src={logo} />
+            <img src={"https://i.ibb.co/HFBwcP5/Trustpilot-Mini.png"} />
+            <img src={"https://i.ibb.co/YZY1wn9/Mask-group.png"} />
           </div>
 
           <p>
             Stay up to date with news and promotions by signing up for our
             newsletter
           </p>
+          <div className={styles.footer_input}>
+            <input placeholder="Email" />
+          </div>
+          <div className={styles.footer_checkbox}>
+            <input type="checkbox" id="Privacy" />
+            <label htmlFor="Privacy">
+              I have read and agree to the Privacy Policy
+            </label>
+          </div>
         </div>
 
         <div className={styles.footer_right}>

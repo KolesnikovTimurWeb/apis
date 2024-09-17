@@ -85,20 +85,20 @@ input {
 }
 
 .container {
-  max-width: 1700px;
+  max-width: 1520px;
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1750px) {
+@media screen and (max-width: 1550px) {
   .container {
-    max-width: 80%;
+    max-width: 78%;
     margin: 0 auto;
   }
 }
 
 @media screen and (max-width: 1450px) {
   .container {
-    max-width: 90%;
+    max-width: 85%;
     margin: 0 auto;
   }
 }

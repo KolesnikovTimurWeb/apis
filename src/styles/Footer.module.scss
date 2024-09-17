@@ -12,13 +12,32 @@
       flex-direction: column;
     }
   }
+  &_checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &_input {
+    margin: 10px 0;
+    font-size: 14px;
+    font-weight: 500;
+    border: 2px solid #1f2736;
+    display: flex;
+    width: 100%;
+
+    input {
+      padding: 16px 12px;
+      width: 100%;
+    }
+  }
   &_left {
     margin-bottom: 20px;
     img {
       max-width: 200px;
     }
     p {
-      margin-top: 20px;
+      margin-top: 50px;
       color: #1f2736;
       font-size: 12px;
       font-weight: 300;
